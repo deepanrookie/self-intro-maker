@@ -1,0 +1,81 @@
+function copyText(htmlElement)
+{
+    if(!htmlElement)
+
+{
+    return;
+}
+}
+
+let elementText = htmlElement.innerText;
+let inputElement = document.createElement('input');
+inputElement.setAttribute('value',elementText)
+document.body.appendChild(inputElement);
+inputElement.select();
+document.execCommand('copy');
+inputElement.parentNode.removeChild(inputElement);
+
+
+
+
+document.querySelector("#cop").onclick =
+function()
+{
+    copyText(document.querySelector("#small"));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const button = document.getElementById('b');
+
+
+const userData1 = document.getElementById('data1');
+const userData2 = document.getElementById('data2');
+const userData3 = document.getElementById('data3');
+const userData4 = document.getElementById('data4');
+const userData5 = document.getElementById('data5');
+const userData6 = document.getElementById('data6');
+const userData7 = document.getElementById('data7');
+const userData8 = document.getElementById('data8');
+const userData9 = document.getElementById('data9');
+
+
+const text1 = document.getElementById('n');
+const text2 = document.getElementById('N');
+const text3 = document.getElementById('r');
+const text4 = document.getElementById('a');
+const text5 = document.getElementById('c');
+const text6 = document.getElementById('d');
+const text7 = document.getElementById('i');
+const text8 = document.getElementById('s');
+const text9 = document.getElementById('h');
+
+
+
+function ShowName(inputName)
+{
+    text1.innerHTML = userData1.value;
+    text2.innerHTML = userData1.value;
+    text3.innerHTML = userData1.value;
+    text4.innerHTML = userData1.value;
+    text5.innerHTML = userData1.value;
+    text6.innerHTML = userData1.value;
+    text7.innerHTML = userData1.value;
+    text8.innerHTML = userData1.value;
+    text9.innerHTML = userData1.value;
+}
+
+
+
+button.addEventListener('click',ShowName);

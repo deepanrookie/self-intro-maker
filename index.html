@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELFINTRODUCTION</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src ="script.js"></script>
+</head>
+<body>
+    <h1>SAMPLE SPEAKER</h1>
+    <form id="board"  method="post" >
+            <h2>DETAILS</h2>
+            <ht style="border: px solid rgb(0, 0, 0); width: 100%;"></ht>
+            <div class="detail1">NAME:<input placeholder="name"  id="data1" type="text" required></div>
+            <div class="detail2">NATIVE:<input placeholder="place" id="data2" type="text" required></div>
+            <div class="detail3">CURRENT RESIDENCE:<input placeholder="current location" id="data3" type="text" required></div>
+            <div class="detail4">DEGREE:<input placeholder="education" id="data4" type="text" required></div>
+            <div class="detail5 ">INSTITUTION:<input placeholder="institution" id="data5" type="text" required></div>
+            <div class="detail6 ">DESCRIBE YOURSELF:<input placeholder="tell about yourself" id="data6" type="text" required></div>
+            <div class="detail7 ">UNIQUNESS:<input placeholder="special skills" id="data7" type="text" required></div>
+            <div class="detail8 ">HOBBIES:<input placeholder="pass times" id="data8" type="text" required></div>
+            <div class="detail9">STEPS TO REACH GOAL:<input placeholder="steps to achieve" id="data9" type="text" required></div>
+            <input type="button" onclick="details()" value="submit" id="b" target="_blank">
+        
+    </form>
+<h1>YOUR SELF-INTRODUCTION</h1>
+<div class="main">
+    <p id="small"><h2>This is your self Introduction</h2></p>
+</div>
+
+<button id="copy">copy text</button>
+
+<a href="https://elevenlabs.io/" target="_blank">
+<button id="voice">voice</button></a>
+
+
+
+<script>
+
+    
+function details()
+{
+
+let d1=document.getElementById("data1").value;
+let d2=document.getElementById("data2").value;
+let d3=document.getElementById("data3").value;
+let d4=document.getElementById("data4").value;
+let d5=document.getElementById("data5").value;
+let d6=document.getElementById("data6").value;
+let d7=document.getElementById("data7").value;
+let d8=document.getElementById("data8").value;
+let d9=document.getElementById("data9").value;
+
+let con = document.getElementById("small");
+
+con.innerHTML ="My Name is " + d1 +" and I come from " + d2 +" Currently, I reside in " + d3+ 
+" I am curently pursuing my degree in " + d4 +" from "+ d5 +" I am a " + d6 +" having a great Interest in " + d7 +
+" which has driven me to continually seek knowledge and growth.and my unique specality is " + d8 +
+" This skill has helped me to approach challenges with creativity and finding innovative solutions that stand out. Beyond academics, I am interested in "+ d9 + 
+" which allow me to enjoy the world around me.In my journey towards achieving my goals,I follow a certain rules with clear objectives, and maintain a consistent focus on my priorities. By staying adaptable and learning from each experience, I continue to progress towards my aspirations";
+
+}
+
+let para = document.getElementById("small");
+let copy = document.getElementById("copy");
+   
+
+copy.onclick = function copied()
+{   
+    
+    small.select();
+    small.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert('data copied');
+}
+
+
+</script>
+
+
+</body>
+</html>
